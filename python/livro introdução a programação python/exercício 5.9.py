@@ -9,7 +9,8 @@ n1 = int(input('Digite um número: '))
 n2 = int(input('Dividido por quanto: '))
 resultado = 0
 
-while n1 > 0:
+while n1 >= n2:
     n1 = n1 - n2
     resultado += 1
 print(resultado)
+print(n1)

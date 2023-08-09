@@ -1,0 +1,24 @@
+<!-- a) Elaborar um programa que leia um número. Calcule e informe os seus
+vizinhos, ou seja, o número anterior e posterior.
+Exemplo:
+Número: 15
+Vizinhos: 14 e 16
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testanto números</title>
+</head>
+<body>
+    <script>
+        var num = prompt('Digite um número: ')
+        var ant = Number(num) - 1
+        var prox = Number(num) + 1
+        alert('Você digitou o numero ' + num + '. O anterior a ele é ' + ant + ', e o posterior é ' + prox + '.')
+    </script>
+</body>
+</html>
+

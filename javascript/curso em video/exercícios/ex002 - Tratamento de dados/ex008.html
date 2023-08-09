@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aqui vou testar as condições em Javascript!</h1>
+    <p>Digite o seu nome: <input type="text" name="name" id="nome"></p>
+    <span id="span-nome"><input type="button" value="Guardar" id="botao-nome"></span>
+    <p>Digite a velocidade: <input type="number" name="txt" id="txtvel"></p>
+    <input type="button" value="Verificar" id="botao-vel">
+    <div id="resultado"></div>
+   
+    <script>
+    var result = window.document.getElementById('resultado')
+    var botao_vel = window.document.getElementById('botao-vel')
+    var botao_nome = window.document.getElementById('botao-nome')
+    var lim = 100
+    var nome;
+
+    botao_vel.addEventListener('click', verificar)
+    botao_nome.addEventListener('click', guardar)
+
+    function guardar() {
+        nome = window.document.getElementById('nome').value;
+        var spanNome = window.document.getElementById('span-nome')
+        spanNome.innerHTML = `<input type="button" value="Guardou" id="botao-nome">`
+    }
+
+    function verificar() {
+        var txtv = window.document.getElementById('txtvel')
+        var vel = Number(txtv.value)
+        result.innerHTML = `<p>Sua velocidade foi de <strong>${vel} Km/h</strong>.</p>`
+
+        if (vel > lim) {
+            result.innerHTML += `Você foi multado, ${nome}, pois o limite de velocidade era <strong>${lim} Km/h</strong>.`
+        } else {
+            result.innerHTML += `Tenha uma ótima viagem ${nome}.`
+        }
+    }
+    </script>
+</body>
+</html>

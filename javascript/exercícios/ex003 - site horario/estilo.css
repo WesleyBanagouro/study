@@ -16,6 +16,7 @@ section {
     padding: 10px;
     margin: auto;
     width: 500px;
+    border: 2px solid black;
 }
 
 footer {
@@ -24,8 +25,7 @@ footer {
     font-style: italic;
 }
 
-.momento-dia {
-    background-color: aqua;
+#nada {
     text-align: center;
-
 }
+

@@ -9,7 +9,7 @@ while True:
     escolha = 0
 
     while escolha != 'P' and escolha != 'I':
-        escolha = input('Digite sua jogada (P/I): ').capitalize()
+        escolha = input('Digite sua jogada (Par/Impar): ').capitalize()
     numero = int(input('Escolha um número de 0 a 10: '))
     num_pc = random.randint(1, 10)
     if (num_pc + numero) % 2 == 0:
@@ -17,7 +17,7 @@ while True:
     else:
         ganhador = 'I'
     if escolha == ganhador:
-        print('Você ganhou porra!')
+        print('Você ganhou seu merda!')
         print(f'Sua escolha: {numero}. Escolha do PC: {num_pc}. A soma dos dois vale {num_pc + numero}, ou seja é {ganhador}.')
         cont += 1
     else:

@@ -10,8 +10,6 @@ function guardar() {
     var fimOut = Number(fimIn.value);
     var passoOut = Number(passoIn.value);
     var inicioOut = Number(inicioIn.value);
-    var spanNome = document.getElementById('span-contar');
-    spanNome.innerHTML = '<input id="contar" type="button" value="Valores salvos">';
     
     contagem.innerHTML = ''; // Limpa o conteúdo anterior da contagem
     

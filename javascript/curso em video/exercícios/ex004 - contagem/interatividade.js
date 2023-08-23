@@ -1,28 +1,23 @@
-var agora = new Date();
-var hora = agora.getHours();
-var minutos = agora.getMinutes();
-var horario = window.document.getElementById('horario');
-var saudacao = document.getElementById('saudacao')
-var nome = window.prompt('Qual é o seu nome?');
-var imagem = document.getElementById('imagem');
-var fundo = document.body;
+var inicioIn = document.getElementById('inicio');
+var fimIn = document.getElementById('fim');
+var passoIn = document.getElementById('passo');
+var contar = document.getElementById('contar');
+var contagem = document.getElementById('contagem');
 
-if (hora < 12 && hora >= 6) {
-    saudacao.innerHTML = `Bom dia, ${nome}!`;
-    horario.innerHTML = `Agora são ${hora}h${minutos}.`;
-    imagem.src = "manha.png";
-    imagem.alt = "manha";
-    fundo.style.background = "#5CF2F2";
-} else if (hora >= 12 && hora < 18) {
-    saudacao.innerHTML = `Boa tarde, ${nome}!`;
-    horario.innerHTML = `Agora são ${hora}h${minutos}.`;
-    imagem.src = "tarde.png";
-    imagem.alt = "tarde";
-    fundo.style.background = "#F29F05";
-} else {
-    saudacao.innerHTML = `Boa noite, ${nome}!`;
-    horario.innerHTML = `Agora são ${hora}h${minutos}.`;
-    imagem.src = "noite.png";
-    imagem.alt = "noite";
-    fundo.style.background = "#0B215E";
+contar.addEventListener('click', guardar);
+
+function guardar() {
+    var fimOut = Number(fimIn.value);
+    var passoOut = Number(passoIn.value);
+    var inicioOut = Number(inicioIn.value);
+    var spanNome = document.getElementById('span-contar');
+    spanNome.innerHTML = '<input id="contar" type="button" value="Valores salvos">';
+    
+    contagem.innerHTML = ''; // Limpa o conteúdo anterior da contagem
+    
+    // Loop para exibir cada valor respeitando o passo
+    for (var valorAtual = inicioOut; valorAtual <= fimOut; valorAtual += passoOut) {
+        var seta = (valorAtual + passoOut <= fimOut) ? ' → ' : '';
+        contagem.innerHTML += `${valorAtual}${seta}`;
+    }
 }

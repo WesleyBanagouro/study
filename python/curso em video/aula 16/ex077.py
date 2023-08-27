@@ -6,11 +6,14 @@ palavras = ('hamburger', 'queijo', 'batata', 'refrigerante')
 vogais = 'aeiouAEIOU'
 
 for palavra in palavras:
+    vogais_palavra = []
     for letra in palavra:
-        vogais_palavra = []
         if letra in vogais:
             vogais_palavra.append(letra)
-print(vogais_palavra)
+    vogais_formatadas = ' '.join(vogais_palavra)
+    print(f'Vogais em {palavra}: {vogais_formatadas}')
+
+
     
     
     

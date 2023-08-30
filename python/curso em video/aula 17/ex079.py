@@ -1,0 +1,4 @@
+'''Crie um programa onde o usuário possa digitar vários valores 
+numéricos e cadastre-os em uma lista. Caso o número já exista la
+dentro, ele não será adicionado. No final, serão exibidos todos os
+valores unicos digitados em ordem crescente.'''

@@ -2,19 +2,13 @@
 (não usar acentos). Depois disso, voce deve mostrar, para cada palavra
 quais são suas vogais.'''
 
-def calcular_media_soma(valores):
-    soma = sum(valores)
-    media = soma / len(valores)
-    return media, soma
+palavras = ('python', 'programacao', 'linguagem', 'computador', 'desenvolvimento')
 
-# Valores de exemplo (você pode substituí-los por seus próprios valores)
-valores = (10, 20, 30, 40, 50)
+vogais = 'aeiou'
 
-media, soma = calcular_media_soma(valores)
-
-print(f'Valores: {valores}')
-print(f'Média: {media:.2f}')
-print(f'Soma: {soma}')
+for palavra in palavras:
+    vogais_encontradas = [letra for letra in palavra if letra in vogais]
+    print(f'Vogais em {palavra}: {", ".join(vogais_encontradas)}')
 
 
     

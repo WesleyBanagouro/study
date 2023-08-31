@@ -15,5 +15,5 @@ while c == 'S':
         valores.append(valor)
         print('Valor adicionado com sucesso!')
         c = input('Quer continuar? (s/n)').upper()
-print(valores)
+print(valores.sort())
     

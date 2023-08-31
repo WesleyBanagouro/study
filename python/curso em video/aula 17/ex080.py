@@ -6,7 +6,7 @@ No final, mostre a lista ordenada na tela.'''
 
 valores = []
 
-for i in range(5):
+for i in range(7):
     valor = int(input('Digite um valor: '))
     if len(valores) == 0:
         valores.append(valor)

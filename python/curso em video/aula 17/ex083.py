@@ -3,7 +3,7 @@ que use parenteses. Seu aplicativo deverá analisar se a expressão
 passada esta com os parenteses abertos e fechados na ordem correta.'''
 
 
-expressao = input('Digite a expressão: ')
+expressao = input('Digite aqui sua expressão: ')
 pilha = []
 for caractere in expressao:
     if caractere == '(':
@@ -15,6 +15,6 @@ for caractere in expressao:
             pilha.append(')')
             break
 if len(pilha) == 0:
-    print('Sua expressão está válida!')
+    print('Sua expressão está válida! Parabéns')
 else:
     print('Sua expressão está errada!')

@@ -6,26 +6,28 @@ valores pares e os valores ímpares digitados, respectivamente.
 
 Ao final, mostre o conteudo das 3 listas geradas.'''
 
-c = 0
-
 numeros = []
 pares = []
 impares = []
 
-while c != 'N':
-    numero = int(input('Digite um número para separar entre pares e impares: '))
+while True:
+    numero = int(input('Digite um número para separar entre pares e ímpares: '))
     numeros.append(numero)
     if numero % 2 == 0:
         pares.append(numero)
     else:
         impares.append(numero)
-    c = input('Quer continuar digitando? (s/n)').upper()
+    
+    c = input('Quer continuar digitando? (s/n)').strip().upper()
+    if c != 'S':
+        break
+
 print(f'A lista completa de números digitados: {numeros}.')
-if len(pares) == 0:
-    print('Você não digitou pares.')
-else:
+if pares:
     print(f'A lista de números pares digitados: {pares}.')
-if len(impares) == 0:
-    print('Você não digitou ímpares.')
 else:
-    print(f'A lista de números impares digitados: {impares}.')
+    print('Você não digitou números pares.')
+if impares:
+    print(f'A lista de números ímpares digitados: {impares}.')
+else:
+    print('Você não digitou números ímpares.')

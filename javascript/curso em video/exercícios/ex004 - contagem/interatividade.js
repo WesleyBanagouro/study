@@ -14,7 +14,7 @@ function contarValores() {
     contagem.innerHTML = ''; // Limpa o conteúdo anterior da contagem
     
     if (passoOut <= 0) {
-        contagem.innerHTML = 'O passo deve ser maior que zero.';
+        contagem.innerHTML = 'O passo deve ser maior que zero. OK?';
         return;
     }
 

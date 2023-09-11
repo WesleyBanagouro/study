@@ -8,9 +8,19 @@ import random
 
 numeros = [0, 1, 2, 3, 4, 5]
 aleatorio = random.choice(numeros)
-seu_numero = int(input('O computador pensou em um número de 0 a 5, tente adivinhar:'))
-print(aleatorio)
-if seu_numero == aleatorio:
-    print('Parabéns, você é o bichão memo!')
-else:
-    print('Não, você errou!')
+
+print("Vou pensar em um número de 0 a 5. Tente adivinhar...")
+
+tentativas = 0
+while True:
+    seu_numero = int(input('Qual é o seu palpite? '))
+    tentativas += 1
+
+    if seu_numero == aleatorio:
+        print(f'Parabéns, você acertou em {tentativas} tentativas!')
+        break
+    else:
+        print('Não, tente novamente.')
+
+print(f'O número escolhido pelo computador era: {aleatorio}')
+

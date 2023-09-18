@@ -6,4 +6,4 @@ function fatorial(n) {
     return res;
 }
 
-console.log(fatorial(4));
+console.log(fatorial(6));

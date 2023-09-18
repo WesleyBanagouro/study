@@ -6,4 +6,4 @@ function parImp(n) {
     }
 }
 
-console.log(parImp(55))
+console.log(parImp(54))

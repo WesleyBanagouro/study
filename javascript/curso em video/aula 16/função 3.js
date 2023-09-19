@@ -8,4 +8,4 @@ function fatorial(n) {
     }
 }
 
-console.log(fatorial(8))
+console.log(fatorial(9))
